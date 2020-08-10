@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Currency Bot</title>
+        <title>Chatbot I.A - RD</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
         <link href="css/chatbot.css" rel="stylesheet" type="text/css">
@@ -20,8 +20,8 @@
         <script>
             var botmanWidget = {
                 frameEndpoint: '/botman/chat',
-                title: 'Currency Bot',
-                introMessage: 'Hola, soy Botman te proporcionaré  información para tus problemas de configuración del sistema operativo. Para mas informacion escribe opciones.'
+                title: 'Chatbot - Troubleshooting',
+                introMessage: 'Hola, soy Botman y te brindaré mis servicios para resolver tus problemas con el sistema operativo. Para mas informacion escribe opciones.'
             };
         </script>
 

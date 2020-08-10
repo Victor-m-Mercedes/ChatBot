@@ -21,6 +21,10 @@ body {
     margin-bottom: 20px;
 }
 
+.logo img {
+    border-radius: 60px;
+}
+
 .links a {
     font-size: 1.25rem;
     text-decoration: none;
