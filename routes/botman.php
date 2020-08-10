@@ -4,25 +4,6 @@ use BotMan\BotMan\Messages\Outgoing\OutgoingMessage;
 
 $botman = resolve('botman');
 
-// $botman->hears('Hi', function ($bot) {
-//     $bot->reply('Hello!');
-// });
-
-// $botman->hears('What is your name', function ($bot) {
-//     $bot->reply('My name is Cristian!');
-// });
-
-// $botman->hears('age', function ($bot) {
-//     $bot->reply('21');
-// });
-
-
-
-
 $botman->fallback(function ($bot) {
-    $bot->reply("Sorry i can't understand!");
+    $bot->reply("Lo siento, no tengo respuesta a lo que me preguntas.");
 });
-
-
-
-// $botman->hears('Start conversation', BotManController::class.'@startConversation');
