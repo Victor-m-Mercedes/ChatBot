@@ -15,12 +15,12 @@ class WelcomeConversation extends Conversation
      */
     public function askQuestion()
     {
-        $question = Question::create("¿Qué sistema operativo estas utilizando ?")
+        $question = Question::create("¿Qué sistema operativo utilizas?")
             ->fallback('Unable to ask question')
             ->callbackId('ask_about_option')
             ->addButtons([
                 Button::create('Windows')->value('windows'),
-                Button::create('macOs')->value('macos'),
+                Button::create('macOS')->value('macos'),
             ]);
 
         return $this->ask($question, function ( Answer $answer ) {

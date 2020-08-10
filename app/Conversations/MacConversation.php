@@ -34,57 +34,47 @@ class MacConversation extends Conversation
             if ( $answer->isInteractiveMessageReply() ) {
                     switch ($answer->getValue()) {
                         case 0:
-                            $this->say('<b>Problemas para iniciarla</b> <br> 
-                            <p>Si tu Mac no se inicia correctamente y te encuentras frente a una pantalla en blanco o una pantalla gris en lugar de tu escritorio, 
-                            entonces tienes que arrancarla en Modo Seguro. En Modo Seguro, tu MacOS arrancará con el mínimo de software y operaciones necesarias, 
-                            pero además ejecutará una revisión de tu disco de inicio y reparará cualquier problema en el directorio que pueda ser la causa de los problemas.</p> <br>
-                            <p>Para iniciar en Modo Seguro, inicia tu Mac y luego mantén presionada la tecla de mayúsculas (Shift). Aparecerá el logotipo de Apple y luego la pantalla
-                            de inicio de sesión. Puedes soltar la tecla Shift cuando el logotipo de Apple desaparezca y veas la pantalla de inicio de sesión. Pueden pasar unos minutos
-                            antes de que llegue a la pantalla de inicio de sesión ya que MacOS ejecuta sus diagnósticos en tu disco duro. Para salir del Modo Seguro y activar tu Mac de
-                            forma habitual, solo reinicia tu Mac sin tener que mantener ninguna tecla.</p> <br>');
+                            $this->say('<b>Problemas de arranque / Inicia lento o despacio</b>
+                            <br> 
+                            <p><b>Causas:</b> PRAM es una memoria no volátil que utilizan las computadoras Apple para almacenar información de configuración.
+                            Sin embargo, ciertos cambios pueden permanecer estancados en la memoria residual, lo que puede conducir a comportamientos extraños.
+                            </p>
+                            <br>
+                            <p><b>Solución:</b> apague su computadora. Luego encienda el dispositivo mientras mantiene presionadas simultáneamente
+                            las teclas [comando] + [opción] + [P] + [R]. Debería escuchar el timbre de Apple antes de que la computadora se reinicie. 
+                            Continúe presionando las teclas hasta que escuche el segundo timbre de Apple para borrar el PRAM.</p> <br>');
                             break;
                         case 1: 
-                            $this->say('<b>Elementos de inicio de sesión incompatibles</b> <br>
-                            <p>Si te encuentras frente a una pantalla azul cuando enciendes tu Mac, podría significar que uno de tus elementos de inicio ––apps que se inician automáticamente
-                             cuando prendes tu Mac–– es incompatible con MacOS. Con un poco de prueba y error, puedes identificar qué app es la hija problemática.</p> <br>
+                            $this->say('<b>La computadora no se inicia en el escritorio.</b> <br>
+                            <p><b>Causas:</b> cuando las extensiones impiden que una computadora se inicie, con frecuencia se debe a una aplicación que se 
+                            instaló o una aplicación de inicio de sesión que está causando el bloqueo.</p> <br>
 
-                             <p>Puedes eliminar los elementos de inicio de sesión de uno en uno e iniciar tu Mac después de cada eliminación para ver si el problema se ha ido. Para hacerlo,
-                              ve a&nbsp;<strong>Preferencias del sistema &gt; Usuarios y Grupos</strong> y haz clic en tu nombre a la izquierda debajo de Usuario Actual. A continuación,
-                              haz clic en la pestaña <strong>Elementos de Inicio de Sesión</strong> que se encuentra arriba de la ventana a la derecha. Resalta una app y luego haz clic
-                              en el signo "-" a continuación. Se eliminará de la lista de Elementos de Inicio de sesión y podrás reiniciar tu Mac para ver si se ha solucionado el problema de encendido.
-                              De lo contrario, puedes regresar a la lista y eliminar otra aplicación, y continuar así hasta que encuentres al culpable. Puedes volver a agregar elementos a la lista Elementos
-                              de Inicio presionando el botón "+" y seleccionando elementos de la carpeta Aplicaciones.</p>
-
-                             
-                            <a target="_blank" href="https://s3.amazonaws.com/www.iotransfer.net/upload/blog/image/20180814/1534235596841184.jpg">
-                            <img width="262px" class="media__image media__element b-lazy b-responsive blazy--on b-loaded" src="https://s3.amazonaws.com/www.iotransfer.net/upload/blog/image/20180814/1534235596841184.jpg" title="Los 11 problemas de Windows 10 más comunes y su solución"> </a>');
+                            <p><b>Solución:</b> encienda o reinicie la computadora mientras mantiene presionada la tecla [shift]. Continúe presionando la tecla para deshabilitar 
+                            las extensiones y los elementos de inicio de sesión para que no se carguen durante el proceso de inicio. Desde un escritorio con extensiones 
+                            deshabilitadas, el "modo seguro" permitirá al usuario final eliminar la aplicación ofensiva y arrancar normalmente.</p>');
                             break;
                         case 2:
-                            $this->say('<b>App que no responde</b> <br>
-                            <p>Es posible que una app ocasionalmente haga que tu Mac se desconecte o se quede bloqueada. Y cuando una app se bloquea, congela tu sesión y no te deja hacer nada,
-                             incluso salir de ella. Ingresa: Forzar Salida. Puedes abrir el menú Forzar Salida desde el ícono de Apple en la esquina superior izquierda o presionando
-                              <strong>Comando-Opción-Escape</strong>. Simplemente resalta la app que no responde y presiona el botón <strong>Forzar Salida</strong>.
-                               (También puedes seleccionar varias apps para forzar la salida usando las teclas Comando o Shift al hacer tus selecciones).</p>
-                             <a target="_blank" href="https://9to5mac.com/wp-content/uploads/sites/6/2018/07/how-to-force-quit-mac-apps.jpg?quality=82&strip=all">
-                            <img width="262px" class="media__image media__element b-lazy b-responsive blazy--on b-loaded" src="https://9to5mac.com/wp-content/uploads/sites/6/2018/07/how-to-force-quit-mac-apps.jpg?quality=82&strip=all" title="Los 11 problemas de Windows 10 más comunes y su solución"> </a>');
+                            $this->say('<b>La computadora no inicia o carga una imagen basada en la red.</b> <br>
+                            <p>
+                                <b>Causas:</b> el uso más común para el arranque en red es junto con un servidor OS X que ejecuta el servicio NetBoot o al implementar / capturar una imagen de un sistema de referencia OS X.
+                            </p>
+                            <p>
+                                <b>Solución:</b> encienda o reinicie la computadora mientras mantiene presionada la letra [N]. El proceso de inicio iniciará un inicio de red y buscará cualquier Mac que ejecute OS X Server o cualquier Mac que ejecute una aplicación o servicio de clonación basado en red que esté transmitiendo.
+                            </p>');
                             break;
                         case 3:
-                            $this->say('<b>La famosa pelotita giratoria</b> <br>
-                            <p>Si estás viendo la pelota de playa girando con mucha regularidad, entonces es hora de echar un vistazo a lo que podría estar causando la desaceleración.
-                             Abre el Monitor de Actividad (buscándolo o ubícalo en la carpeta Utilidades, que se encuentra dentro de la carpeta Aplicaciones) para ver cuánto impacto
-                              tienen las apps que estás ejecutando actualmente en los recursos de tu sistema. En la ventana del Monitor de Actividad puedes ver estadísticas en tiempo real
-                               sobre la cantidad de recursos de CPU y memoria que usa cada app. También puedes usar el Monitor de Actividad para salir de cualquier app que use una cantidad
-                                de recursos excesiva. Simplemente resalta una app de la lista, haz click en el botón <strong>X</strong> en la esquina superior izquierda y luego
-                                 elige&nbsp;<strong>Salir </strong>o <strong>Forzar Salida</strong>.</p>
-                                 <a target="_blank" href="https://support.apple.com/library/content/dam/edam/applecare/images/es_ES/osx/yosemite-activity_monitor-cpu.png">
-                                 <img width="262px" class="media__image media__element b-lazy b-responsive blazy--on b-loaded" src="https://support.apple.com/library/content/dam/edam/applecare/images/es_ES/osx/yosemite-activity_monitor-cpu.png" title="Los 11 problemas de Windows 10 más comunes y su solución"> </a>
-                            ');
+                            $this->say('<b>La contraseña vinculada a mi computadora Apple se ha olvidado o no está disponible.</b> <br>
+                            <p>
+                                <b>Causas:</b> Las Mac son resistentes pero aún propensas a la corrupción de datos y los mismos errores basados ​​en el usuario que cualquier otro sistema operativo debido a un uso inadecuado. Dos ejemplos comunes de esto son un usuario que olvida su contraseña o los archivos del sistema se corrompen hasta el punto en que el usuario no puede iniciar sesión en el sistema. En ambos escenarios, el usuario final no puede acceder a sus documentos.
+                            </p>
+                            <p>
+                                <b>Solución:</b> encienda o reinicie la computadora mientras mantiene presionada la tecla [opción] para acceder a la partición de recuperación - o [comando] + [R]. Una vez que se haya cargado el entorno de la partición de recuperación, seleccione Utilidades | Terminal desde el menú para cargar la aplicación Terminal. Escriba "resetpassword" (sin comillas) en la pantalla del terminal y presione la tecla [enter] para cargar la utilidad Reset Password. A partir de ahí, se debe seleccionar primero el volumen en el que reside la cuenta de usuario, y luego seleccionar el nombre en el menú desplegable de la cuenta de usuario que desea restablecer. Una vez hecho esto, ingrese la nueva contraseña en ambos campos para reconfirmar la contraseña y haga clic en el botón Guardar para confirmar los cambios. Para probar los cambios, reinicie la Mac e ingrese las nuevas credenciales para la cuenta modificada en la pantalla de inicio de sesión.
+                            </p>');
                         default:
                             # code...
                             break;
                     }
-                    $this->say('Para realizar otra consulta ingrese la palabra opciones en el chat');
-                    // $this->bot->startConversation( new WelcomeConversation() );
+                    $this->say('Para realizar otra consulta ingrese la palabra <b>opciones</b> en el chat');
 
             } else {
                 $this->run();
@@ -97,10 +87,10 @@ class MacConversation extends Conversation
     public function run()
     {
         $options = [
-            ['Problemas para iniciarla',0],
-            ['Elementos de inicio de sesión incompatibles',1],
-            ['App que no responde',2],
-            ['La famosa pelotita giratoria',3]
+            ['Tengo problemas de arranque', 0],
+            ['La computadora no inicia en el escritorio', 1],
+            ['Tengo problemas con el arranque de la red', 2],
+            ['Se me olvidó la contraseña', 3]
         ];
 
         

@@ -19,10 +19,6 @@ class WindowsConversation extends Conversation
      * @return mixed
      */
 
-
-    
-
-
     public function askProblem($buttons)
     {
         $question = Question::create("¿Cuáles de estos problemas presenta tu maquina? ")
@@ -34,55 +30,60 @@ class WindowsConversation extends Conversation
             if ( $answer->isInteractiveMessageReply() ) {
                     switch ($answer->getValue()) {
                         case 0:
-                            $this->say('<b>Problemas con Instalación</b> <br> <p>Es posible que tengas Windows 7 o Windows 8.1 legal y
-                            actualizado, pero por alguna razón <span class="bold">no te aparece
-                            la notificación para actualizar a Windows 10.</span></p> <br> <p>En primer lugar hay que activar las actualizaciones automáticas de Windows Update,
-                            requisito indispensable para actualizar el ordenador a Windows 10. Así que acude a Windows Update o Buscar Actualizaciones en Windows 7 u 8.1, y marca
-                            la opción de actualizaciones automáticas.</p> <br>
-                            <p>Windows 10 será detectado automáticamente por Windows Update y comenzará a descargarse</p> <br>
-                            <a target="_blank" href="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2015/10/127211-11-problemas-windows-10-mas-comunes-su-solucion.jpg?itok=dIAyqZpq">
-                            <img width="262px" class="media__image media__element b-lazy b-responsive blazy--on b-loaded" src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2015/10/127211-11-problemas-windows-10-mas-comunes-su-solucion.jpg?itok=dIAyqZpq" title="Los 11 problemas de Windows 10 más comunes y su solución"> </a>');
+                            $this->say('<p><strong>No hay suficiente espacio para instalar una actualizaci&oacute;n de Windows</strong></p>
+                            <p>Si desea una forma r&aacute;pida de liberar decenas de gigabytes de espacio, le recomendamos&nbsp;&nbsp;<a href="https://macpaw.com/cleanmypc">CleanMyPC</a>&nbsp;.&nbsp;Desinstalar&aacute; las aplicaciones y todos sus archivos, limpiar&aacute; la base de datos del Registro de Windows y eliminar&aacute; los archivos temporales que a&uacute;n est&aacute;n por ah&iacute;.&nbsp;Puede eliminar archivos autom&aacute;ticamente, despu&eacute;s de escanear su PC, o puede optar por revisar los resultados del escaneo y decidir por s&iacute; mismo qu&eacute; eliminar.&nbsp;Puedes&nbsp;&nbsp;<a href="https://macpaw.com/cleanmypc">descargarlo gratis aqu&iacute;</a>&nbsp;.</p>
+                            <p>Otra forma de lidiar con este problema es liberar espacio autom&aacute;ticamente en su disco duro o SSD.&nbsp;Una forma de hacerlo es utilizar la herramienta de limpieza de disco integrada.</p>
+                            <ul>
+                            <li>Haga clic en el men&uacute; Inicio</li>
+                            <li>Elija todos los programas</li>
+                            <li>Seleccione Accesorios, luego Herramientas del sistema</li>
+                            <li>Haga clic en Liberador de espacio en disco</li>
+                            <li>En el encabezado Archivos para eliminar, elija qu&eacute; tipos de archivos desea eliminar</li>
+                            <li>Si no est&aacute; seguro de qu&eacute; tipos de archivos debe eliminar, seleccione cada uno de ellos y lea su descripci&oacute;n.</li>
+                            <li>Cuando haya seleccionado los tipos de archivo para eliminar, haga clic en Aceptar</li>
+                            </ul>
+                            <p>Tambi&eacute;n puede liberar espacio archivando y eliminando manualmente archivos grandes y antiguos y desinstalando aplicaciones; sin embargo, le llevar&aacute; mucho tiempo.</p>');
 
                             break;
                         case 1: 
-                            $this->say('<b>Actualizar Windows 10 sin Internet</b> <br> <p> </Si no tienes acceso online en un determinado PC, puedes actualizar a Windows 10 usando una ISO del sistema almacenada en un disco DVD o en un pendrive USB.
-                             Ten en cuenta que es posible que durante la instalación te pida la clave de Windows 7 o Windows 8.1, así que tenla a mano.> <br>
-                             <p>Lo que tienes que hacer es descargar la ISO en otro ordenador con Internet, o pedir a un conocido que lo haga por tí.
-                             Hay que acceder a la web de Descarga de Windows 10 a través de  <a href="https://www.microsoft.com/es-es/software-download/windows10ISO" target="_blank" >este enlace</a>
-                             y descargar la ISO. Verás que hay una herramienta de descarga que te guía durante todo el proceso. Coge la versión de 64 bits si tienes un PC con menos de 2 años. En caso contrario, la de 32 bits.</p> <br>
-                            <a target="_blank" href="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2015/10/127205-11-problemas-windows-10-mas-comunes-su-solucion.jpg?itok=J309WbIT">
-                            <img width="262px" class="media__image media__element b-lazy b-responsive blazy--on b-loaded" src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2015/10/127205-11-problemas-windows-10-mas-comunes-su-solucion.jpg?itok=J309WbIT" title="Los 11 problemas de Windows 10 más comunes y su solución"> </a>');
+                            $this->say('<p><strong>La PC arranca</strong> <strong>lentamente</strong></p>
+                            <p>Hay varias razones por las que Windows 10 podr&iacute;a iniciarse lentamente.&nbsp;Las dos primeras cosas que debe verificar son que Windows est&eacute; actualizado y no se haya infectado con malware.</p>
+                            <p>Para buscar malware:</p>
+                            <ul>
+                            <li>Presione la tecla de Windows y "I"</li>
+                            <li>Elija Actualizaci&oacute;n y seguridad</li>
+                            <li>Seleccione Windows Defender</li>
+                            <li>Haga clic en Abrir Windows Defender</li>
+                            <li>Presione Escaneo completo y Escanear ahora&nbsp;</li>
+                            </ul>
+                            <p>Una vez que haya terminado de escanear, siga las instrucciones en pantalla.</p>
+                            <p>Para buscar actualizaciones de Windows, vaya a Actualizaciones y seguridad y seleccione la opci&oacute;n para buscar actualizaciones o instalar actualizaciones disponibles.</p>');
                             break;
                         case 2:
-                            $this->say('<b>Problemas en el arranque</b> <br>
-                            <p>Es posible que tengas algún programa que se instala en memoria cuando se inicia Windows y consume recursos que interfieren con otra aplicación.
-                             Hay una gran cantidad de software que se instala en memoria sin tu permiso de forma permanente,
-                             incluso aunque sólo uses ese programa una o dos veces al mes... Adobe, iTunes, Nero, suelen utilizar estas prácticas.</p> <br>
-                             
-                             <p>Por medio de las herramientas del sistema de Windows 10 podemos eliminar del arranque estas aplicaciones que no usamos a menudo,
-                             o aplazar su puesta en marcha unos minutos para que no interfieran con el inicio del ordenador.</p> <br>
-                             <b>Desactiva programas en el arranque</b> <br>
-                             <a target="_blank" href="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2015/09/120977-como-acelerar-windows-10-estos-trucos.jpg?itok=ab5tChGQ">
-                            <img width="262px" class="media__image media__element b-lazy b-responsive blazy--on b-loaded" src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2015/09/120977-como-acelerar-windows-10-estos-trucos.jpg?itok=ab5tChGQ" title="Los 11 problemas de Windows 10 más comunes y su solución"> </a>');
+                            $this->say('<p><strong>Demasiadas notificaciones</strong></p>
+                            <p>El Centro de actividades de Windows 10 es excelente para mantener todas sus notificaciones en un solo lugar.&nbsp;Sin embargo, puede llenarse r&aacute;pidamente de mensajes que no le interesan de aplicaciones que casi nunca usa.&nbsp;Afortunadamente, puedes apagarlos.</p>
+                            <ul>
+                            <li>Vaya al men&uacute; Inicio y elija Configuraci&oacute;n</li>
+                            <li>Haga clic en Sistema, luego elija Notificaciones y acciones</li>
+                            <li>Utilice los interruptores de palanca para controlar c&oacute;mo y cu&aacute;ndo aparecen las notificaciones, o si aparecen.&nbsp;Adem&aacute;s de controlar las notificaciones a nivel del sistema, puede configurarlas por aplicaci&oacute;n.</li>
+                            </ul>
+                            <p>Si ya no necesita el programa con notificaciones molestas, puede desinstalarlo y olvidarse del dolor.&nbsp;<a href="https://macpaw.com/cleanmypc">Multi Uninstaller de CleanMyPC</a>&nbsp;es la herramienta adecuada para deshacerse de estas aplicaciones por completo y para siempre.</p>');
                             break;
                         case 3:
-                            $this->say('<b>El ordenador no arranca</b> <br>
-                            <p>Has instalado un nuevo driver o programa, y ahora el PC se bloquea y reinicia, o directamente no arranca, o muestra una pantalla en negro. ¿Qué podemos hacer?</> 
-                            <p>Un elemento bloquea el uso o inicio de Windows 10, así que hay que repararlo. Para ello debes hacer lo siguiente:</p>
+                            $this->say('<p><strong>Problema con la impresora</strong></p>
+                            <p>Las impresoras son una fuente com&uacute;n de problemas, pero a menudo se pueden solucionar f&aacute;cilmente.&nbsp;</p>
                             <ul>
-                                <li>En otro ordenador que funcione, ve al sitio web Descarga de software de Microsoft y descarga la herramienta de instalación de Windows 10 en un pendrive o un disco DVD.<li>
-                                <li>Inserta dicho pendrive o USB en el ordenador estropeado y, a continuación, reinicia el equipo.<li>
-                                <li>En la pantalla Instalar Windows, selecciona Reparar el equipo.<li>
-                                <li>Abre el Administrador de dispositivos escribiendo administrador de dispositivos en el cuadro de búsqueda en la barra de tareas, selecciona Administrador de dispositivos y la flecha para ampliar los Adaptadores de pantalla. <li>
-                                <li>Reinicia el equipo para que los cambios surtan efecto.<li>
-                            </ul>');
+                            <li>Vaya al Panel de control, luego elija Dispositivos e impresoras.&nbsp;</li>
+                            <li>Haz clic derecho en tu impresora y elige eliminarla.</li>
+                            </ul>
+                            <p>Ahora, vaya al sitio web del fabricante de su impresora y descargue los controladores m&aacute;s recientes para su impresora y siga las instrucciones para instalarlos.</p>
+                            <p>Los problemas de Windows 10 no tienen por qu&eacute; causarte pesadillas.&nbsp;Si sigue los consejos aqu&iacute;, podr&aacute; resolver los m&aacute;s habituales de forma r&aacute;pida y sencilla.&nbsp;Y no olvide&nbsp;<a href="https://macpaw.com/download/cleanmypc">descargar CleanMyPC</a>&nbsp;y deje que le ayude a liberar espacio, acelerar su PC y solucionar otros problemas molestos de Windows 10.</p>');
                             break;
                         default:
                             # code...
                             break;
                     }
-                    $this->say('Para realizar otra consulta ingrese la palabra opciones en el chat');
-                    // $this->bot->startConversation( new WelcomeConversation() );
+                    $this->say('Para realizar otra consulta ingrese la palabra <b>opciones</b> en el chat');
 
             } else {
                 $this->run();
@@ -114,10 +115,10 @@ class WindowsConversation extends Conversation
     public function run()
     {
         $options = [
-            ['Problemas con Instalación',0],
-            ['Actualizar Windows 10 sin Internet',1],
-            ['Problemas con el arranque',2],
-            ['El ordenador no arranca',3]
+            ['Poco espacio para actualizar Windows',0],
+            ['La PC arranca lentamente',1],
+            ['Demasiadas notificaciones',2],
+            ['Problema con la impresora',3]
         ];
 
         
