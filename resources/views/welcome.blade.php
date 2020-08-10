@@ -21,7 +21,8 @@
             var botmanWidget = {
                 frameEndpoint: '/botman/chat',
                 title: 'Chatbot - Troubleshooting',
-                introMessage: 'Hola, soy Chatman y te brindaré mis servicios para resolver tus problemas con el sistema operativo. Para mas informacion escribe <b>opciones</b>. Esto fue hecho por Carlos Polanco (19-0728)'
+                introMessage: 'Hola, soy Chatman y te brindaré mis servicios para resolver tus problemas con el sistema operativo. Para mas informacion escribe <b>opciones</b>. Esto fue hecho por Carlos Polanco (19-0728)',
+                mainColor: '#CEDBDD'
             };
         </script>
 
