@@ -2,7 +2,7 @@ body {
     font-family: "Varela Round", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #195272;
+    background-color: #2AFEF3;
 }
 
 .container {
@@ -32,12 +32,12 @@ body {
     margin: 10px;
 }
 
-#botmanWidgetRoot .desktop-closed-message-avatar {
-    background: #FFFFFF !important;
-}
+/* #botmanWidgetRoot .desktop-closed-message-avatar {
+    background: #2E2E2E !important;
+} */
 
 svg path {
-    fill: #195272;
+    fill: #FFF;
 }
 
 @media all and (max-width: 500px) {

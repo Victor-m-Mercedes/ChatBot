@@ -15,23 +15,25 @@ class WelcomeConversation extends Conversation
      */
     public function askQuestion()
     {
-        $question = Question::create("¿Qué sistema operativo utilizas?")
-            ->fallback('Unable to ask question')
+        $question = Question::create("¿Qué marca de Smart TV deseas consultar?")
+            ->fallback('Lo siento, no sé como responderte')
             ->callbackId('ask_about_option')
             ->addButtons([
-                Button::create('Windows')->value('windows'),
-                Button::create('macOS')->value('macos'),
+                Button::create('Samsung')->value('samsung'),
+                Button::create('LG')->value('lg'),
+                Button::create('TCL')->value('tcl'),
             ]);
 
         return $this->ask($question, function ( Answer $answer ) {
             switch ($answer->getValue()) {
-                case 'win':
-                case 'windows':
-                    $this->bot->startConversation( new WindowsConversation() );
+                case 'samsung':
+                    $this->bot->startConversation( new SamsungConversation() );
                 break;
-                case 'mac':
-                case 'macos':
-                    $this->bot->startConversation( new MacConversation() );
+                case 'lg':
+                    $this->bot->startConversation( new LgConversation() );
+                break;
+                case 'tcl':
+                    $this->bot->startConversation( new TclConversation() );
                 break;
                 
                 default:

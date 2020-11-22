@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Chatbot I.A - RD</title>
+        <title>Chatbot I.A - BotMan</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
         <link href="css/chatbot.css" rel="stylesheet" type="text/css">
@@ -12,7 +12,7 @@
         <div class="container">
             <div class="content">
                 <div class="logo">
-                    <img src="https://i.pinimg.com/originals/0c/67/5a/0c675a8e1061478d2b7b21b330093444.gif" alt="Chatbot icon">
+                    <img src="https://media.giphy.com/media/S60CrN9iMxFlyp7uM8/giphy.gif" alt="Chatbot icon">
                 </div>
             </div>
         </div>
@@ -20,9 +20,10 @@
         <script>
             var botmanWidget = {
                 frameEndpoint: '/botman/chat',
-                title: 'Chatbot - Troubleshooting',
-                introMessage: 'Hola, soy Chatman y te brindaré mis servicios para resolver tus problemas con el sistema operativo. Para mas informacion escribe <b>opciones</b>. Esto fue hecho por Carlos Polanco (19-0728)',
-                mainColor: '#CEDBDD'
+                title: 'Chatbot - Smart TV Troubleshooting',
+                introMessage: 'Hola, soy Chatman y te brindaré soluciones para tu Smart TV. Para mas informacion escribe <b>opciones</b>. Hecho con el corazón por Victor Manuel (19-0749)',
+                mainColor: '#2AFEF3',
+                bubbleBackground: '#2E2E2E'
             };
         </script>
 
