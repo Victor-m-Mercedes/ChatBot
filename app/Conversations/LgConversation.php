@@ -63,8 +63,7 @@ class LgConversation extends Conversation
     {
         $options = [
             ['Problemas de conexión a internet', 0],
-            ['La TV no enciende', 1],
-            ['Otro problema', 2]
+            ['La TV no enciende', 1]
         ];
 
         
